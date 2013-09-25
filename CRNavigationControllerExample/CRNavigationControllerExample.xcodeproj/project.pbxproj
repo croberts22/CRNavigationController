@@ -17,8 +17,6 @@
 		63C925E117F2633D00DE97BB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C925E017F2633D00DE97BB /* XCTest.framework */; };
 		63C925E217F2633D00DE97BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C925C717F2633D00DE97BB /* Foundation.framework */; };
 		63C925E317F2633D00DE97BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C925CB17F2633D00DE97BB /* UIKit.framework */; };
-		63C925EB17F2633D00DE97BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63C925E917F2633D00DE97BB /* InfoPlist.strings */; };
-		63C925ED17F2633D00DE97BB /* CRNavigationControllerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C925EC17F2633D00DE97BB /* CRNavigationControllerExampleTests.m */; };
 		63C925F817F2636500DE97BB /* PrimaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C925F717F2636500DE97BB /* PrimaryViewController.m */; };
 		63C925FB17F2639700DE97BB /* CRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C925FA17F2639700DE97BB /* CRNavigationController.m */; };
 		63C9260217F263D000DE97BB /* CRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C9260117F263D000DE97BB /* CRNavigationBar.m */; };
@@ -49,9 +47,6 @@
 		63C925D917F2633D00DE97BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		63C925DF17F2633D00DE97BB /* CRNavigationControllerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CRNavigationControllerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C925E017F2633D00DE97BB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		63C925E817F2633D00DE97BB /* CRNavigationControllerExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CRNavigationControllerExampleTests-Info.plist"; sourceTree = "<group>"; };
-		63C925EA17F2633D00DE97BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		63C925EC17F2633D00DE97BB /* CRNavigationControllerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRNavigationControllerExampleTests.m; sourceTree = "<group>"; };
 		63C925F617F2636500DE97BB /* PrimaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimaryViewController.h; sourceTree = "<group>"; };
 		63C925F717F2636500DE97BB /* PrimaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimaryViewController.m; sourceTree = "<group>"; };
 		63C925F917F2639700DE97BB /* CRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRNavigationController.h; path = CRNavigationController/CRNavigationController.h; sourceTree = "<group>"; };
@@ -89,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				63C925CD17F2633D00DE97BB /* CRNavigationControllerExample */,
-				63C925E617F2633D00DE97BB /* CRNavigationControllerExampleTests */,
 				63C925C617F2633D00DE97BB /* Frameworks */,
 				63C925C517F2633D00DE97BB /* Products */,
 			);
@@ -137,24 +131,6 @@
 				63C925D017F2633D00DE97BB /* InfoPlist.strings */,
 				63C925D317F2633D00DE97BB /* main.m */,
 				63C925D517F2633D00DE97BB /* CRNavigationControllerExample-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		63C925E617F2633D00DE97BB /* CRNavigationControllerExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				63C925EC17F2633D00DE97BB /* CRNavigationControllerExampleTests.m */,
-				63C925E717F2633D00DE97BB /* Supporting Files */,
-			);
-			path = CRNavigationControllerExampleTests;
-			sourceTree = "<group>";
-		};
-		63C925E717F2633D00DE97BB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				63C925E817F2633D00DE97BB /* CRNavigationControllerExampleTests-Info.plist */,
-				63C925E917F2633D00DE97BB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -255,7 +231,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63C925EB17F2633D00DE97BB /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +253,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63C925ED17F2633D00DE97BB /* CRNavigationControllerExampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +271,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				63C925D117F2633D00DE97BB /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		63C925E917F2633D00DE97BB /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				63C925EA17F2633D00DE97BB /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -471,6 +437,7 @@
 				63C925F217F2633D00DE97BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63C925F317F2633D00DE97BB /* Build configuration list for PBXNativeTarget "CRNavigationControllerExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +446,7 @@
 				63C925F517F2633D00DE97BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

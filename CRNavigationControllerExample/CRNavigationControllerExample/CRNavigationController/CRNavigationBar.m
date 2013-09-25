@@ -19,16 +19,19 @@ static CGFloat const kSpaceToCoverStatusBars = 20.0f;
 
 - (void)setBarTintColor:(UIColor *)barTintColor {
     [super setBarTintColor:barTintColor];
+    
     if (self.colorLayer == nil) {
         self.colorLayer = [CALayer layer];
         self.colorLayer.opacity = kDefaultColorLayerOpacity;
         [self.layer addSublayer:self.colorLayer];
     }
+    
     self.colorLayer.backgroundColor = barTintColor.CGColor;
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    
     if (self.colorLayer != nil) {
         self.colorLayer.frame = CGRectMake(0, 0 - kSpaceToCoverStatusBars, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) + kSpaceToCoverStatusBars);
         
@@ -36,14 +39,8 @@ static CGFloat const kSpaceToCoverStatusBars = 20.0f;
     }
 }
 
-- (void)displayColorLayer:(BOOL)display animated:(BOOL)animated {
-    float duration = animated ? 0.3f : 0.0f;
-    float alpha = display ? 0.3f : 0.0f;
-    
-    [UIView animateWithDuration:duration
-                     animations:^{
-                     
-                     }];
+- (void)displayColorLayer:(BOOL)display {
+    self.colorLayer.hidden = !display;
 }
 
 @end
