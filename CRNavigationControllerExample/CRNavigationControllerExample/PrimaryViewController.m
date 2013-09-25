@@ -53,6 +53,8 @@ static NSArray *viewBackgroundColors = nil;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"Menu";
+    
     self.colorControl.selectedSegmentIndex = 0;
     self.layerControl.selectedSegmentIndex = 1;
     

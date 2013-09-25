@@ -23,6 +23,10 @@
     
     self.window.rootViewController = nvc;
     
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                                           UITextAttributeTextColor : [UIColor whiteColor]
+                                                           }];
+    
     return YES;
 }
 
