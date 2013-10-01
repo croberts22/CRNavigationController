@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		637D254617FB209700800F08 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637D254517FB209700800F08 /* TestViewController.m */; };
 		63C925C817F2633D00DE97BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C925C717F2633D00DE97BB /* Foundation.framework */; };
 		63C925CA17F2633D00DE97BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C925C917F2633D00DE97BB /* CoreGraphics.framework */; };
 		63C925CC17F2633D00DE97BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C925CB17F2633D00DE97BB /* UIKit.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		637D254417FB209700800F08 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		637D254517FB209700800F08 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		63C925C417F2633D00DE97BB /* CRNavigationControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRNavigationControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C925C717F2633D00DE97BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		63C925C917F2633D00DE97BB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,6 +123,8 @@
 				63C925F617F2636500DE97BB /* PrimaryViewController.h */,
 				63C925F717F2636500DE97BB /* PrimaryViewController.m */,
 				63C9260417F2655200DE97BB /* PrimaryViewController.xib */,
+				637D254417FB209700800F08 /* TestViewController.h */,
+				637D254517FB209700800F08 /* TestViewController.m */,
 			);
 			path = CRNavigationControllerExample;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				637D254617FB209700800F08 /* TestViewController.m in Sources */,
 				63C925FB17F2639700DE97BB /* CRNavigationController.m in Sources */,
 				63C925D817F2633D00DE97BB /* AppDelegate.m in Sources */,
 				63C925F817F2636500DE97BB /* PrimaryViewController.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "PrimaryViewController.h"
+#import "TestViewController.h"
 #import "CRNavigationBar.h"
 #import "CRNavigationController.h"
 
@@ -33,6 +34,7 @@
 - (IBAction)colorControllerChanged:(id)sender;
 - (void)setBarTintColorWithRed:(double)red green:(double)green blue:(double)blue alpha:(double)alpha;
 - (void)setBackgroundColorWithRed:(double)red green:(double)green blue:(double)blue alpha:(double)alpha;
+- (IBAction)testConfigurationPressed:(id)sender;
 
 @end
 
@@ -53,7 +55,7 @@ static NSArray *viewBackgroundColors = nil;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Menu";
+    self.title = @"CRNavigationControllerExample";
     
     self.colorControl.selectedSegmentIndex = 0;
     self.layerControl.selectedSegmentIndex = 1;
@@ -152,6 +154,14 @@ static NSArray *viewBackgroundColors = nil;
     self.greenValue.text = [NSString stringWithFormat:@"%d", (int)((components[1] / 1.0f) * 255)];
     self.blueValue.text = [NSString stringWithFormat:@"%d", (int)((components[2] / 1.0f) * 255)];
     self.alphaValue.text = [NSString stringWithFormat:@"%d%%", (int)((CGColorGetAlpha(backgroundColor.CGColor) / 1.0f) * 100)];
+}
+
+#pragma mark - IBAction Methods
+
+- (IBAction)testConfigurationPressed:(id)sender {
+    TestViewController *vc = [[TestViewController alloc] init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

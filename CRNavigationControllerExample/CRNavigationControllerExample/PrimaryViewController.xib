@@ -70,6 +70,7 @@
                         <segment title="Without Layer"/>
                         <segment title="With Layer"/>
                     </segments>
+                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="layerControllerChanged:" destination="-1" eventType="valueChanged" id="KHk-vR-TeW"/>
                     </connections>
@@ -81,6 +82,7 @@
                         <segment title="barTintColor"/>
                         <segment title="view.backgroundColor"/>
                     </segments>
+                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="colorControllerChanged:" destination="-1" eventType="valueChanged" id="DKC-MN-DzF"/>
                     </connections>
@@ -196,6 +198,17 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FRd-UE-XBB">
+                    <rect key="frame" x="80" y="218" width="160" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Test Configuration">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="testConfigurationPressed:" destination="-1" eventType="touchUpInside" id="uRJ-vX-RP8"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
