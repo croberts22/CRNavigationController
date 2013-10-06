@@ -24,6 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tableView.backgroundColor = [UIColor clearColor];
 }
 
 #pragma mark - Table view data source
@@ -47,8 +49,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = @"Here's some sample text.";
+    cell.textLabel.text = [NSString stringWithFormat:@"[%d, %d] - Here's some sample text.", indexPath.section, indexPath.row];
     cell.detailTextLabel.text = @"And here's some even better detailed text!";
+    cell.backgroundColor = [UIColor clearColor];
     
     return cell;
 }

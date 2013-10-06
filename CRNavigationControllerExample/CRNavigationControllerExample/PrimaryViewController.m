@@ -160,6 +160,7 @@ static NSArray *viewBackgroundColors = nil;
 
 - (IBAction)testConfigurationPressed:(id)sender {
     TestViewController *vc = [[TestViewController alloc] init];
+    vc.view.backgroundColor = self.view.backgroundColor;
     
     [self.navigationController pushViewController:vc animated:YES];
 }
