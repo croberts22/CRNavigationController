@@ -43,9 +43,9 @@ static CGFloat const kSpaceToCoverStatusBars = 20.0f;
     green = [self convertValue:green withOpacity:opacity];
     blue = [self convertValue:blue withOpacity:opacity];
     
-    red = MAX(MIN(255, red), 0);
-    green = MAX(MIN(255, green), 0);
-    blue = MAX(MIN(255, blue), 0);
+    red = MAX(MIN(1.0, red), 0);
+    green = MAX(MIN(1.0, green), 0);
+    blue = MAX(MIN(1.0, blue), 0);
     
     self.colorLayer.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:alpha].CGColor;
 }
