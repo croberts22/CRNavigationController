@@ -69,27 +69,27 @@ static NSArray *viewBackgroundColors = nil;
 }
 
 - (IBAction)redButtonPressed:(id)sender {
-    self.redSlider.value = 1.0f;
-    self.greenSlider.value = 0.0f;
-    self.blueSlider.value = 0.0f;
+    self.redSlider.value = 191.0/255.0;
+    self.greenSlider.value = 29.0/255.0;
+    self.blueSlider.value = 42.0/255.0;
     self.alphaSlider.value = 1.0f;
     
     [self slidersToggled:nil];
 }
 
 - (IBAction)greenButtonPressed:(id)sender {
-    self.redSlider.value = 0.0f;
-    self.greenSlider.value = 1.0f;
-    self.blueSlider.value = 0.0f;
+    self.redSlider.value = 133.0/255.0;
+    self.greenSlider.value = 196.0/255.0;
+    self.blueSlider.value = 65.0/255.0;
     self.alphaSlider.value = 1.0f;
     
     [self slidersToggled:nil];
 }
 
 - (IBAction)blueButtonPressed:(id)sender {
-    self.redSlider.value = 0.0f;
-    self.greenSlider.value = 0.0f;
-    self.blueSlider.value = 1.0f;
+    self.redSlider.value = 51.0/255.0f;
+    self.greenSlider.value = 76.0/255.0f;
+    self.blueSlider.value = 136.0/255.0f;
     self.alphaSlider.value = 1.0f;
     
     [self slidersToggled:nil];
