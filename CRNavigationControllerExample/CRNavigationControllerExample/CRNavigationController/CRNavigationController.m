@@ -19,6 +19,9 @@
     self = [super initWithNavigationBarClass:[CRNavigationBar class] toolbarClass:nil];
     if(self) {
         // Custom initialization here, if needed.
+        
+        // To override the opacity of CRNavigationBar's barTintColor, set this value to YES.
+        ((CRNavigationBar *)self.navigationBar).overrideOpacity = NO;
     }
     return self;
 }
@@ -27,6 +30,9 @@
     self = [super initWithNavigationBarClass:[CRNavigationBar class] toolbarClass:nil];
     if(self) {
         self.viewControllers = @[rootViewController];
+        
+        // To override the opacity of CRNavigationBar's barTintColor, set this value to YES.
+        ((CRNavigationBar *)self.navigationBar).overrideOpacity = NO;
     }
     
     return self;

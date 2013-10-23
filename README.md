@@ -3,6 +3,8 @@ CRNavigationController
 
 A `UINavigationController` subclass that brings about a more vivid, brighter `UINavigationBar`.
 
+**iOS 7.0.3 Update**: It seems like this update has changed the way translucency works for both navigation bars and toolbars. The blurriness is dependant on the `alpha` of the color. Unfortunately, there is no magic formula to make colors made in iOS 7.0.2 and earlier the same as they are in iOS 7.0.3. I've found that setting the alpha of the navigation bar at around `0.6f-0.8f` provides the best bang for your buck; that is, you can still obtain translucency, however, at the cost of your vibrant color). The additional color layer has been removed since this also impacts translucency, until we can figure out a more optimal solution. If you are still running an earlier version of iOS 7, this library still works!
+
 With the release of iOS 7, Apple has brought translucency all throughout the operating system. As developers, we are (in a sense) responsible for utilizing these new libraries to present unity between our apps and the OS. With the introduction of gaussian, translucent navigation bars, we are able to allow for more dynamic context with the views that we are presenting.
 
 However, there's a subtle flaw; much of the color options are rather desaturated. Suppose you wanted a translucent navigation bar that was a slightly light, rich blue. With native classes, you would get this (under a white background):

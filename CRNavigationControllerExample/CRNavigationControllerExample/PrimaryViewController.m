@@ -46,7 +46,7 @@ static NSArray *viewBackgroundColors = nil;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        barTintColors = @[ @(0.5f), @(0.5f), @(0.5f), @(1.0f) ];
+        barTintColors = @[ @(0.5f), @(0.5f), @(0.5f), @(0.5f) ];
         viewBackgroundColors = @[ @(1.0f), @(1.0f), @(1.0f), @(1.0f) ];
     }
     return self;
@@ -63,7 +63,7 @@ static NSArray *viewBackgroundColors = nil;
     self.redSlider.value = 0.5f;
     self.greenSlider.value = 0.5f;
     self.blueSlider.value = 0.5f;
-    self.alphaSlider.value = 1.0f;
+    self.alphaSlider.value = 0.5f;
     
     [self slidersToggled:nil];
 }

@@ -25,7 +25,23 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ * For use for devices running iOS 7.0.3. This overrides the alpha value of any color
+ * passed in to be 70%. Since (starting with this version) the blur effect is ultimately
+ * determined by the transparency of the color, setting this to a value other than 1.0f will
+ * provide said blurriness. Values between 0.5f and 0.7f seem to work best while still trying
+ * to retain most of the desired color. 
+ * @warning: Setting this value to 1.0f will reduce blurred translucency significantly.
+ */
+static CGFloat const kDefaultNavigationBarAlpha = 0.70f;
+
 @interface CRNavigationBar : UINavigationBar
+
+/**
+ * If set to YES, this will override the opacity of the barTintColor and will set it to
+ * the value contained in kDefaultNavigationBarAlpha.
+ */
+@property (nonatomic, assign) BOOL overrideOpacity;
 
 /**
  * Determines whether or not the extra color layer should be displayed.
