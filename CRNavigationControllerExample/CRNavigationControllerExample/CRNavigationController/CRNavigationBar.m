@@ -18,16 +18,17 @@ static CGFloat const kDefaultColorLayerOpacity = 0.4f;
 static CGFloat const kSpaceToCoverStatusBars = 20.0f;
 
 - (void)setBarTintColor:(UIColor *)barTintColor {
-    [super setBarTintColor:barTintColor];
+    CGFloat red, green, blue, alpha;
+    [barTintColor getRed:&red green:&green blue:&blue alpha:&alpha];
+    
+    UIColor *calibratedColor = [UIColor colorWithRed:red green:green blue:blue alpha:0.66];
+    [super setBarTintColor:calibratedColor];
     
     if (self.colorLayer == nil) {
         self.colorLayer = [CALayer layer];
         self.colorLayer.opacity = kDefaultColorLayerOpacity;
         [self.layer addSublayer:self.colorLayer];
     }
-    
-    CGFloat red, green, blue, alpha;
-    [barTintColor getRed:&red green:&green blue:&blue alpha:&alpha];
     
     CGFloat opacity = kDefaultColorLayerOpacity;
     
