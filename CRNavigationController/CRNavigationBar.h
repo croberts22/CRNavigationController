@@ -43,11 +43,4 @@ static CGFloat const kDefaultNavigationBarAlpha = 0.70f;
  */
 @property (nonatomic, assign) BOOL overrideOpacity;
 
-/**
- * Determines whether or not the extra color layer should be displayed.
- * @param display a BOOL; YES for keeping it visible, NO to hide it.
- * @warning this method is not available in the actual implementation, and is only here for demonstration purposes.
- */
-- (void)displayColorLayer:(BOOL)display;
-
 @end

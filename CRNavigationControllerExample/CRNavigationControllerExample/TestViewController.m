@@ -39,7 +39,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [NSString stringWithFormat:@"Section %d", section];
+    return [NSString stringWithFormat:@"Section %ld", (long)section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -49,7 +49,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"[%d, %d] - Here's some sample text.", indexPath.section, indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"[%ld, %ld] - Here's some sample text.", (long)indexPath.section, (long)indexPath.row];
     cell.detailTextLabel.text = @"And here's some even better detailed text!";
     cell.backgroundColor = [UIColor clearColor];
     
