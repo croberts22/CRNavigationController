@@ -3,7 +3,9 @@ CRNavigationController
 
 A `UINavigationController` subclass that brings about a more vivid, brighter `UINavigationBar`.
 
-**iOS 7.0.3 Update**: It seems like this update has changed the way translucency works for both navigation bars and toolbars. The blurriness is dependant on the `alpha` of the color. Unfortunately, there is no magic formula to make colors made in iOS 7.0.2 and earlier the same as they are in iOS 7.0.3. I've found that setting the alpha of the navigation bar at around `0.6f-0.8f` provides the best bang for your buck; that is, you can still obtain translucency, however, at the cost of your vibrant color). The additional color layer has been removed since this also impacts translucency, until we can figure out a more optimal solution. If you are still running an earlier version of iOS 7, this library still works!
+**iOS 7.1 Update**: This update has yet again affected how UINavigationBar's color scheme works. This time, it seems as though any modifications to the alpha channel are ignored. This hinders this library quite a bit since we rely on editing this value to display the color layer beneath. I am currently looking for a workaround for this.
+
+**iOS 7.0.3 Update**: It seems like this update has changed the way translucency works for both navigation bars and toolbars. The blurriness is dependant on the `alpha` of the color. Unfortunately, there is no magic formula to make colors made in iOS 7.0.2 and earlier the same as they are in iOS 7.0.3. I've found that setting the alpha of the navigation bar at around `0.6f-0.8f` provides the best bang for your buck; that is, you can still obtain translucency, however, at the cost of your vibrant color. The additional color layer has been removed since this also impacts translucency, until we can figure out a more optimal solution. If you are still running an earlier version of iOS 7, this library still works!
 
 With the release of iOS 7, Apple has brought translucency all throughout the operating system. As developers, we are (in a sense) responsible for utilizing these new libraries to present unity between our apps and the OS. With the introduction of gaussian, translucent navigation bars, we are able to allow for more dynamic context with the views that we are presenting.
 
@@ -46,7 +48,7 @@ Requirements
 ------------------------------------------------------------------
 
 - Xcode 5
-- iOS 7
+- iOS 7.0 (iOS 7.0.3 has a different color scheme. So does iOS 7.1.)
 - A desire to experiment with colors!
 
 Demonstration
