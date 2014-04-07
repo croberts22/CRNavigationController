@@ -138,10 +138,10 @@ static NSArray *viewBackgroundColors = nil;
     
     const CGFloat *components = CGColorGetComponents(tintColor.CGColor);
     
-    self.redValue.text = [NSString stringWithFormat:@"%d", (int)((components[0] / 1.0f) * 255)];
-    self.greenValue.text = [NSString stringWithFormat:@"%d", (int)((components[1] / 1.0f) * 255)];
-    self.blueValue.text = [NSString stringWithFormat:@"%d", (int)((components[2] / 1.0f) * 255)];
-    self.alphaValue.text = [NSString stringWithFormat:@"%d%%", (int)((CGColorGetAlpha(tintColor.CGColor) / 1.0f) * 100)];
+    self.redValue.text = [NSString stringWithFormat:@"%d (0x%lX)", (int)((components[0] / 1.0f) * 255), (unsigned long)((components[0] / 1.0f) * 255)];
+    self.greenValue.text = [NSString stringWithFormat:@"%d (0x%lX)", (int)((components[1] / 1.0f) * 255), (unsigned long)((components[1] / 1.0f) * 255)];
+    self.blueValue.text = [NSString stringWithFormat:@"%d (0x%lX)", (int)((components[2] / 1.0f) * 255), (unsigned long)((components[2] / 1.0f) * 255)];
+    self.alphaValue.text = [NSString stringWithFormat:@"%d%% (0x%lX)", (int)((CGColorGetAlpha(tintColor.CGColor) / 1.0f) * 100), (unsigned long)((components[3] / 1.0f) * 255)];
 }
 
 - (void)setBackgroundColorWithRed:(double)red green:(double)green blue:(double)blue alpha:(double)alpha {
