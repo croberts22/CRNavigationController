@@ -1,0 +1,7 @@
+platform :ios
+
+pod "CRNavigationController", :path => "../"
+
+target "CRNavigationController" do
+end
+

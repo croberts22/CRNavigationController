@@ -14,15 +14,14 @@
 
 @implementation CRNavigationBar
 
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+
 static CGFloat const kDefaultColorLayerOpacity = 0.5f;
 static CGFloat const kSpaceToCoverStatusBars = 20.0f;
-
-#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 - (void)setBarTintColor:(UIColor *)barTintColor {
 
     [super setBarTintColor:barTintColor];
-    
     
     // iOS 7.1 seems to completely ignore the alpha channel and any modifications to it.
     // Hence, adding an extra layer is moot.

@@ -1,6 +1,9 @@
 CRNavigationController
 ======================
 
+[![Version](http://cocoapod-badges.herokuapp.com/v/CRNavigationController/badge.png)](http://cocoadocs.org/docsets/CRNavigationController)
+[![Platform](http://cocoapod-badges.herokuapp.com/p/CRNavigationController/badge.png)](http://cocoadocs.org/docsets/CRNavigationController)
+
 A `UINavigationController` subclass that brings about a more vivid, brighter `UINavigationBar`.
 
 **iOS 7.1 Update**: This update has yet again affected how UINavigationBar's color scheme works. This time, it seems as though any modifications to the alpha channel are ignored. This hinders this library quite a bit since we rely on editing this value to display the color layer beneath. I am currently looking for a workaround for this.
@@ -51,10 +54,19 @@ Requirements
 - iOS 7.0 (iOS 7.0.3 has a different color scheme. So does iOS 7.1.)
 - A desire to experiment with colors!
 
+Installation
+------------------------------------------------------------------
+
+CRNavigationController is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
+
+    pod "CRNavigationController"
+
 Demonstration
 ------------------------------------------------------------------
 
-A demo app is available in the repo. Mess with the toggles to change the color of either the `CRNavigationBar` or the `backgroundColor` of the view to understand how much impact a specific color may have on a certain `barTintColor`. RGB values in decimal format are also displayed for your convenience if you decide to use this as a tool to find the perfect color.
+To run the example project, clone the repo and run `pod install` from the Example directory first.
+
+Mess with the toggles to change the color of either the `CRNavigationBar` or the `backgroundColor` of the view to understand how much impact a specific color may have on a certain `barTintColor`. RGB values in decimal and hexadecimal format are also displayed for your convenience if you decide to use this as a tool to find the perfect color.
 
 Credits, Licensing, and Other What Have You
 ------------------------------------------------------------------
@@ -68,3 +80,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
