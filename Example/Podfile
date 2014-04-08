@@ -3,5 +3,6 @@ platform :ios
 pod "CRNavigationController", :path => "../"
 
 target "CRNavigationController" do
+  pod "CRNavigationController"	
 end
 
