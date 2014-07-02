@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="CRNavigationController : A UINavigationController subclass that brings about a more vivid, brighter UINavigationBar." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>CRNavigationController</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/croberts22/CRNavigationController">View on GitHub</a>
+
+          <h1 id="project_title">CRNavigationController</h1>
+          <h2 id="project_tagline">A UINavigationController subclass that brings about a more vivid, brighter UINavigationBar.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/croberts22/CRNavigationController/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/croberts22/CRNavigationController/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="crnavigationcontroller" class="anchor" href="#crnavigationcontroller"><span class="octicon octicon-link"></span></a>CRNavigationController</h1>
+
+<p><a href="http://cocoadocs.org/docsets/CRNavigationController"><img src="http://cocoapod-badges.herokuapp.com/v/CRNavigationController/badge.png" alt="Version"></a>
+<a href="http://cocoadocs.org/docsets/CRNavigationController"><img src="http://cocoapod-badges.herokuapp.com/p/CRNavigationController/badge.png" alt="Platform"></a></p>
+
+<p>A <code>UINavigationController</code> subclass that brings about a more vivid, brighter <code>UINavigationBar</code>.</p>
+
+<p><strong>iOS 7.1 Update</strong>: This update has yet again affected how UINavigationBar's color scheme works. This time, it seems as though any modifications to the alpha channel are ignored. This hinders this library quite a bit since we rely on editing this value to display the color layer beneath. I am currently looking for a workaround for this.</p>
+
+<p><strong>iOS 7.0.3 Update</strong>: It seems like this update has changed the way translucency works for both navigation bars and toolbars. The blurriness is dependant on the <code>alpha</code> of the color. Unfortunately, there is no magic formula to make colors made in iOS 7.0.2 and earlier the same as they are in iOS 7.0.3. I've found that setting the alpha of the navigation bar at around <code>0.6f-0.8f</code> provides the best bang for your buck; that is, you can still obtain translucency, however, at the cost of your vibrant color. The additional color layer has been removed since this also impacts translucency, until we can figure out a more optimal solution. If you are still running an earlier version of iOS 7, this library still works!</p>
+
+<p>With the release of iOS 7, Apple has brought translucency all throughout the operating system. As developers, we are (in a sense) responsible for utilizing these new libraries to present unity between our apps and the OS. With the introduction of gaussian, translucent navigation bars, we are able to allow for more dynamic context with the views that we are presenting.</p>
+
+<p>However, there's a subtle flaw; much of the color options are rather desaturated. Suppose you wanted a translucent navigation bar that was a slightly light, rich blue. With native classes, you would get this (under a white background):</p>
+
+<p><img src="http://www.coreyjustinroberts.com/projects/CRNavigationController/blue_no_layer.png" alt="Blue UINavigationBar without Layer"></p>
+
+<p>Not exactly what you'd expect. You could come up with a combination of values for red, green, and blue and still never get the color you wanted. This is because Apple has decided to lower the saturation of the color <em>by about 40%</em>. Additionally, it inherits some color from whatever is behind it. As a result, we get this very pale blue color that isn't necessarily what we want.</p>
+
+<p><em>Enter this library.</em></p>
+
+<p>This library does a simple little addition to the <code>UINavigationBar</code>. By adding a layer directly above the navigation bar's background layer, we can enhance the navigation bar's vibrance. This layer takes on the same color that we specify in the navigation bar's <code>barTintColor</code>, at 50% opacity. This can be changed, but I've found that this percentage is the best blend of vibrance and translucency. With this library, we get:</p>
+
+<p><img src="http://www.coreyjustinroberts.com/projects/CRNavigationController/blue_layer.png" alt="Blue UINavigationBar with Layer"></p>
+
+<p>This still doesn't allow us to achieve an absolute color; however, it brings us <strong>many</strong> steps closer in the right direction. </p>
+
+<h1>
+<a name="uinavigationcontroller-vs-crnavigationcontroller" class="anchor" href="#uinavigationcontroller-vs-crnavigationcontroller"><span class="octicon octicon-link"></span></a>
+<code>UINavigationController</code> vs. <code>CRNavigationController</code>:</h1>
+
+<h2>
+<a name="achieving-a-red-bartintcolor" class="anchor" href="#achieving-a-red-bartintcolor"><span class="octicon octicon-link"></span></a>Achieving a red <code>barTintColor</code>:</h2>
+
+<p><img src="http://www.coreyjustinroberts.com/projects/CRNavigationController/red_no_layer.png" alt="Red UINavigationBar without Layer"></p>
+
+<p>vs.</p>
+
+<p><img src="http://www.coreyjustinroberts.com/projects/CRNavigationController/red_layer.png" alt="Red UINavigationBar with Layer"></p>
+
+<h2>
+<a name="achieving-a-black-bartintcolor" class="anchor" href="#achieving-a-black-bartintcolor"><span class="octicon octicon-link"></span></a>Achieving a black <code>barTintColor</code>:</h2>
+
+<p><img src="http://www.coreyjustinroberts.com/projects/CRNavigationController/black_no_layer.png" alt="Black UINavigationBar without Layer"></p>
+
+<p>vs.</p>
+
+<p><img src="http://www.coreyjustinroberts.com/projects/CRNavigationController/black_layer.png" alt="Black UINavigationBar with Layer"></p>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>Xcode 5</li>
+<li>iOS 7.0 (iOS 7.0.3 has a different color scheme. So does iOS 7.1.)</li>
+<li>A desire to experiment with colors!</li>
+</ul><h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>CRNavigationController is available through <a href="http://cocoapods.org">CocoaPods</a>. To install it, simply add the following line to your Podfile:</p>
+
+<pre><code>pod "CRNavigationController"
+</code></pre>
+
+<h2>
+<a name="demonstration" class="anchor" href="#demonstration"><span class="octicon octicon-link"></span></a>Demonstration</h2>
+
+<p>To run the example project, clone the repo and run <code>pod install</code> from the Example directory first.</p>
+
+<p>Mess with the toggles to change the color of either the <code>CRNavigationBar</code> or the <code>backgroundColor</code> of the view to understand how much impact a specific color may have on a certain <code>barTintColor</code>. RGB values in decimal and hexadecimal format are also displayed for your convenience if you decide to use this as a tool to find the perfect color.</p>
+
+<h2>
+<a name="credits-licensing-and-other-what-have-you" class="anchor" href="#credits-licensing-and-other-what-have-you"><span class="octicon octicon-link"></span></a>Credits, Licensing, and Other What Have You</h2>
+
+<p>I can't take all of the credit for this solution. This was a collaborated effort on <a href="http://stackoverflow.com/questions/18897485/achieving-bright-vivid-colors-for-an-ios-7-translucent-uinavigationbar">Stack Overflow</a>, created by me and many others. Feel free to use this library in your projects. Mess with the settings and find what blends work best with your apps! I only ask that you leave boilerplates unchanged and that you mention the use of this library in any apps you decide to ship into the store.</p>
+
+<p>I guess this goes here, too. The infamous MIT License:</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">CRNavigationController maintained by <a href="https://github.com/croberts22">croberts22</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
